@@ -1,30 +1,15 @@
-using EStoreAdminWeb.Middlewares;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<LogtoFileMiddleware>();
-
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-app.Use(async (HttpContext context, RequestDelegate next) =>
-{
-    await context.Response.WriteAsync("Welcome To ITask Technologies - Started\n");
+//This Middleware is used to download Files frow wwwRoot Folder
+app.UseStaticFiles();
 
-    await next(context);
+app.UseRouting();
 
-    await context.Response.WriteAsync("Welcome To ITask Technologies - ended\n");
-});
+app.MapControllers();
 
-app.UseMiddleware<LogtoFileMiddleware>();
-
-app.UseLogToDBMiddleware();
-
-app.UseLogToFlatFileMiddleware();
-
-app.Run(async (HttpContext context) =>
-{
-    await context.Response.WriteAsync("Welcome To Dotnet WeekEnd Batch\n");
-});
 
 app.Run();

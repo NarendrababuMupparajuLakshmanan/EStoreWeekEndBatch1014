@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "EStoreAdminModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EStoreAdminModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EStoreAdminModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EStoreAdminModel/1.0.0": {
+      "type": "project",
+      "path": "../EStoreAdminModel/EStoreAdminModel.csproj",
+      "msbuildProject": "../EStoreAdminModel/EStoreAdminModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "EStoreAdminModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\hp\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\EStoreWeekEndBatch1014\\EStoreWeekEndBatch1014\\EStoreProjectWeekEnd\\EStoreAdmin\\EStoreAdminModel\\EStoreAdminModel.csproj": {
+              "projectPath": "D:\\EStoreWeekEndBatch1014\\EStoreWeekEndBatch1014\\EStoreProjectWeekEnd\\EStoreAdmin\\EStoreAdminModel\\EStoreAdminModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

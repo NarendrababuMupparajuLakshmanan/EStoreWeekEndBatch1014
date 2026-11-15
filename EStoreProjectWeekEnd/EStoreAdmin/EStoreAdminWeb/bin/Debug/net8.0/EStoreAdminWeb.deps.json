@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "EStoreAdminWeb/1.0.0": {
+        "dependencies": {
+          "EStoreAdminModel": "1.0.0"
+        },
         "runtime": {
           "EStoreAdminWeb.dll": {}
+        }
+      },
+      "EStoreAdminModel/1.0.0": {
+        "runtime": {
+          "EStoreAdminModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "EStoreAdminWeb/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EStoreAdminModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

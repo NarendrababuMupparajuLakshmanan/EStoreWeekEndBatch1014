@@ -1,0 +1,46 @@
+﻿@using EStoreAdminModel.Brands;
+
+@model List<BrandModel>;
+<html>
+<head>
+    <title>List of Brands</title>
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="h1 text-center">
+                List of Brands
+            </div>
+        </div>
+        <div class="row mt-2">
+            <table class="table table-light table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <td>
+                            Brand ID
+                        </td>
+                        <td>
+                            Brand Name
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (BrandModel brandModel in Model)
+                    {
+                        <tr>
+                            <td>@brandModel.Id</td>
+                            <td>@brandModel.Name</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
